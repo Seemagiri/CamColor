@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CamColor</string>
+
+    <string name="permission">Permission!</string>
+    <string name="permission_des">Grant these permissions to use Ghost Photo Maker</string>
+    <string name="camera">Camera</string>
+    <string name="storage">Storage</string>
+    <string name="permission_des1">Note: You can also give permissions in Settings --> apps --> Ghost Photo Maker -->Permissions</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+</resources>

@@ -1,0 +1,111 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#585959"
+    tools:context="com.desmond.squarecamera.CameraFragment">
+
+    <com.desmond.squarecamera.SquareCameraPreview
+        android:id="@+id/camera_preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/cover_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/camera_preview_view"
+        android:background="@android:color/black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cover_top_view"
+        android:layout_above="@+id/cover_bottom_view">
+
+        <ImageView
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".6"
+            android:contentDescription=""
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/cover_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/camera_preview_view"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:id="@+id/camera_tools_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/camera_preview_view"
+        android:background="#585959">
+
+        <ImageView
+            android:id="@+id/change_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/squarecamera__camera"
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/capture_image_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="0.95" />
+
+        <LinearLayout
+            android:id="@+id/flash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/flash_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/squarecamera__toggle_flash"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/auto_flash_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/squarecamera___auto"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
